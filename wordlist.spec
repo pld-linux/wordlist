@@ -162,9 +162,7 @@ Source76:	ftp://sable.ox.ac.uk/pub/wordlists/names/crl-names.gz
 Source77:	ftp://sable.ox.ac.uk/pub/wordlists/names/famous.gz
 # Source77-md5:	deb89f5460344d0d3d430b1bde2e01f9
 Source78:	ftp://sable.ox.ac.uk/pub/wordlists/names/fast-names.gz
-# Source78-md5:	2210f0266115a3321eb05d2b6193500d
 Source79:	ftp://sable.ox.ac.uk/pub/wordlists/names/female-names-kantr.gz
-# Source79-md5:	9c2217cc067c4eecd9ba9f4239430480
 Source80:	ftp://sable.ox.ac.uk/pub/wordlists/names/male-names-kantr.gz
 # Source80-md5:	9582d15484d390dd2aba00dc6866700d
 Source81:	ftp://sable.ox.ac.uk/pub/wordlists/names/male-names.gz
@@ -172,7 +170,6 @@ Source81:	ftp://sable.ox.ac.uk/pub/wordlists/names/male-names.gz
 Source82:	ftp://sable.ox.ac.uk/pub/wordlists/names/movie-characters.gz
 # Source82-md5:	017df6a5dbb629a4cb5d2e1f14dde1fe
 Source83:	ftp://sable.ox.ac.uk/pub/wordlists/names/names.french.gz
-# Source83-md5:	54b3647f6cd42d880f72bae5c495bb3f
 Source84:	ftp://sable.ox.ac.uk/pub/wordlists/names/other-names.gz
 # Source84-md5:	e0a942a289d8ae61c940d969e5a89059
 Source85:	ftp://sable.ox.ac.uk/pub/wordlists/names/shakesp-names.gz
@@ -190,7 +187,6 @@ Source90:	ftp://sable.ox.ac.uk/pub/wordlists/net/inet-machines.Z
 Source91:	ftp://sable.ox.ac.uk/pub/wordlists/net/usenet-loginids.Z
 # Source91-md5:	379262455449d4f96976e3ebfc7d5c08
 Source92:	ftp://sable.ox.ac.uk/pub/wordlists/net/usenet-machines.Z
-# Source92-md5:	b32512799f315eab15d360844a100d16
 Source93:	ftp://sable.ox.ac.uk/pub/wordlists/norwegian/words.norwegian.Z
 # Source93-md5:	b62ef95372e88d1f5ec170aebce9b432
 Source94:	ftp://sable.ox.ac.uk/pub/wordlists/places/Colleges.Z
@@ -260,9 +256,13 @@ Source125:	ftp://sable.ox.ac.uk/pub/wordlists/turkish/turkish.dict.gz
 Source126:	ftp://sable.ox.ac.uk/pub/wordlists/yiddish/yiddish.Z
 # Source126-md5:	95ad8defeec3d2565158d3986671979d
 Source127:	ftp://sable.ox.ac.uk/pub/wordlists/names/female-names.gz
+# Source127-md5:	2210f0266115a3321eb05d2b6193500d
 Source128:	ftp://sable.ox.ac.uk/pub/wordlists/names/givennames-ol.gz
+# Source128-md5:	9c2217cc067c4eecd9ba9f4239430480
 Source129:	ftp://sable.ox.ac.uk/pub/wordlists/names/names.hp.gz
+# Source129-md5:	54b3647f6cd42d880f72bae5c495bb3f
 Source130:	ftp://sable.ox.ac.uk/pub/wordlists/net/uunet-sites.Z
+# Source130-md5:	b32512799f315eab15d360844a100d16
 Patch0:		%{name}-noheaders.patch
 BuildRequires:	ncompress
 BuildRequires:	unzip
