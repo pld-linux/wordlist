@@ -3,7 +3,7 @@ Summary(pl):	Lista s³ów bazuj±ca na plikach z ftp://sable.ox.ac.uk/pub/wordlists
 Name:		wordlist
 Version:	1.0
 Release:	2
-License:	Distributable
+License:	distributable
 Group:		Base
 Group(de):	Gründsätzlich
 Group(pl):	Podstawowe
