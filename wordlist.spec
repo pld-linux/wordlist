@@ -5,10 +5,6 @@ Version:	1.0
 Release:	3
 License:	distributable
 Group:		Base
-Group(de):	Gründsätzlich
-Group(es):	Base
-Group(pl):	Podstawowe
-Group(pt_BR):	Base
 Source0:	ftp://sable.ox.ac.uk/pub/wordlists/american/dic-0294.tar.gz
 Source1:	ftp://sable.ox.ac.uk/pub/wordlists/afrikaans/afr_dbf.zip
 Source2:	ftp://sable.ox.ac.uk/pub/wordlists/aussie/oz.Z
