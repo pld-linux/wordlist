@@ -6,7 +6,9 @@ Release:	2
 License:	distributable
 Group:		Base
 Group(de):	Gründsätzlich
+Group(es):	Base
 Group(pl):	Podstawowe
+Group(pt_BR):	Base
 Source0:	ftp://sable.ox.ac.uk/pub/wordlists/american/dic-0294.tar.gz
 Source1:	ftp://sable.ox.ac.uk/pub/wordlists/afrikaans/afr_dbf.zip
 Source2:	ftp://sable.ox.ac.uk/pub/wordlists/aussie/oz.Z
@@ -155,8 +157,7 @@ Lista s³ów bazuj±ca na plikach z ftp://sable.ox.ac.uk/pub/wordlists/.
 %prep
 %setup -q -c
 unzip -qa %{SOURCE1}
-unzip -qa  %{SOURCE15}
-#tar xzf %{SOURCE1}
+unzip -qa %{SOURCE15}
 compress -dc %{SOURCE2} %{SOURCE3} %{SOURCE4} %{SOURCE5} %{SOURCE6} %{SOURCE7} \
 	%{SOURCE8} %{SOURCE9} %{SOURCE10} %{SOURCE11} %{SOURCE13} \
 	%{SOURCE14} %{SOURCE16} %{SOURCE17} %{SOURCE18} %{SOURCE19} \
@@ -193,8 +194,6 @@ for f in croatian hungarian ; do
 	sed -e 's/ .*//' $f > $f.new
 	mv -f $f.new $f
 done
-
-%build
 
 %install
 rm -rf $RPM_BUILD_ROOT
