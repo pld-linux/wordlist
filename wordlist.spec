@@ -1,13 +1,14 @@
 Summary:	Word list based on files from ftp://sable.ox.ac.uk/pub/wordlists/
+Summary(pl):	Lista s³ów bazuj±ca na plikach z ftp://sable.ox.ac.uk/pub/wordlists/
 Name:		wordlist
 Version:	1.0
-Release:	1
+Release:	2
 License:	Distributable
 Group:		Base
 Group(de):	Gründsätzlich
 Group(pl):	Podstawowe
-Source0:	ftp://sable.ox.ac.uk/pub/wordlists/afrikaans/afr_dbf.zip
-Source1:	ftp://sable.ox.ac.uk/pub/wordlists/american/dic-0294.tar.gz
+Source0:	ftp://sable.ox.ac.uk/pub/wordlists/american/dic-0294.tar.gz
+Source1:	ftp://sable.ox.ac.uk/pub/wordlists/afrikaans/afr_dbf.zip
 Source2:	ftp://sable.ox.ac.uk/pub/wordlists/aussie/oz.Z
 Source3:	ftp://sable.ox.ac.uk/pub/wordlists/chinese/chinese.Z
 Source4:	ftp://sable.ox.ac.uk/pub/wordlists/computer/Domains.Z
@@ -137,6 +138,7 @@ Source123:	ftp://sable.ox.ac.uk/pub/wordlists/swahili/swahili.gz
 Source124:	ftp://sable.ox.ac.uk/pub/wordlists/swedish/words.swedish.Z
 Source125:	ftp://sable.ox.ac.uk/pub/wordlists/turkish/turkish.dict.gz
 Source126:	ftp://sable.ox.ac.uk/pub/wordlists/yiddish/yiddish.Z
+Patch0:		%{name}-noheaders.patch
 BuildRequires:	ncompress
 BuildRequires:	unzip
 BuildArch:	noarch
@@ -147,11 +149,14 @@ Obsoletes:	words
 %description
 Word list based on files from ftp://sable.ox.ac.uk/pub/wordlists/.
 
+%description -l pl
+Lista s³ów bazuj±ca na plikach z ftp://sable.ox.ac.uk/pub/wordlists/.
+
 %prep
-%setup -q -c -T
-unzip -qa %{SOURCE0}
+%setup -q -c
+unzip -qa %{SOURCE1}
 unzip -qa  %{SOURCE15}
-tar xzf %{SOURCE1}
+#tar xzf %{SOURCE1}
 compress -dc %{SOURCE2} %{SOURCE3} %{SOURCE4} %{SOURCE5} %{SOURCE6} %{SOURCE7} \
 	%{SOURCE8} %{SOURCE9} %{SOURCE10} %{SOURCE11} %{SOURCE13} \
 	%{SOURCE14} %{SOURCE16} %{SOURCE17} %{SOURCE18} %{SOURCE19} \
@@ -161,10 +166,10 @@ compress -dc %{SOURCE2} %{SOURCE3} %{SOURCE4} %{SOURCE5} %{SOURCE6} %{SOURCE7} \
 	%{SOURCE95} %{SOURCE96} %{SOURCE97} %{SOURCE98} %{SOURCE99} \
 	%{SOURCE110} %{SOURCE111} %{SOURCE112} %{SOURCE120} %{SOURCE122} \
 	%{SOURCE124} %{SOURCE126} > all.Z.lst
-gzip -dc %{SOURCE12} %{SOURCE20} %{SOURCE21} %{SOURCE22} %{SOURCE23} \
+gzip -dc %{SOURCE20} %{SOURCE21} %{SOURCE22} %{SOURCE23} \
 	%{SOURCE24} %{SOURCE25} %{SOURCE26} %{SOURCE27} %{SOURCE28} \
 	%{SOURCE29} %{SOURCE30} %{SOURCE31} %{SOURCE33} %{SOURCE34} \
-	%{SOURCE35} %{SOURCE37} %{SOURCE38} %{SOURCE40} %{SOURCE44} \
+	%{SOURCE35} %{SOURCE37} %{SOURCE38} %{SOURCE44} \
 	%{SOURCE45} %{SOURCE46} %{SOURCE47} %{SOURCE48} %{SOURCE49} \
 	%{SOURCE50} %{SOURCE51} %{SOURCE52} %{SOURCE53} %{SOURCE54} \
 	%{SOURCE55} %{SOURCE56} %{SOURCE57} %{SOURCE61} %{SOURCE62} \
@@ -177,7 +182,17 @@ gzip -dc %{SOURCE12} %{SOURCE20} %{SOURCE21} %{SOURCE22} %{SOURCE23} \
 	%{SOURCE104} %{SOURCE105} %{SOURCE106} %{SOURCE106} %{SOURCE107} \
 	%{SOURCE108} %{SOURCE109} %{SOURCE113} %{SOURCE114} %{SOURCE115} \
 	%{SOURCE116} %{SOURCE117} %{SOURCE118} %{SOURCE119} %{SOURCE120} \
-	%{SOURCE121} %{SOURCE123} %{SOURCE125} >> all.gz.lst
+	%{SOURCE121} %{SOURCE123} > all.gz.lst
+
+gzip -dc %{SOURCE12} > croatian
+gzip -dc %{SOURCE40} > hungarian
+gzip -dc %{SOURCE125} > turkish.dict
+%patch -p1
+
+for f in croatian hungarian ; do
+	sed -e 's/ .*//' $f > $f.new
+	mv -f $f.new $f
+done
 
 %build
 
@@ -185,7 +200,7 @@ gzip -dc %{SOURCE12} %{SOURCE20} %{SOURCE21} %{SOURCE22} %{SOURCE23} \
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_datadir}/dict
 
-cat * | egrep -v "^$|^\#" | tr A-Z a-z | sort | uniq > \
+cat * | tr -d '\r' | egrep -v "^$|^\#" | tr A-Z a-z | sort | uniq > \
 	$RPM_BUILD_ROOT%{_datadir}/dict/words
 
 %clean
