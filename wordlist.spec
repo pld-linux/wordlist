@@ -268,8 +268,8 @@ BuildRequires:	ncompress
 BuildRequires:	unzip
 BuildArch:	noarch
 Provides:	words
-Buildroot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	words
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Word list based on files from ftp://sable.ox.ac.uk/pub/wordlists/.
