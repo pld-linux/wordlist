@@ -2,12 +2,13 @@ Summary:	Word list based on files from ftp://sable.ox.ac.uk/pub/wordlists/
 Summary(pl):	Lista s³ów bazuj±ca na plikach z ftp://sable.ox.ac.uk/pub/wordlists/
 Name:		wordlist
 Version:	1.0
-Release:	3
+Release:	4
 License:	distributable
 Group:		Base
 Source0:	ftp://sable.ox.ac.uk/pub/wordlists/american/dic-0294.tar.gz
 # Source0-md5:	47d85ee5f8a257630b669a27d1fe6dd9
 Source1:	ftp://sable.ox.ac.uk/pub/wordlists/afrikaans/afr_dbf.zip
+# Source1-md5:	1a329126b9b6260b660fd9ffe000444b
 Source2:	ftp://sable.ox.ac.uk/pub/wordlists/aussie/oz.Z
 # Source2-md5:	0c1bbc7d15582cc891aa40259f694def
 Source3:	ftp://sable.ox.ac.uk/pub/wordlists/chinese/chinese.Z
@@ -35,6 +36,7 @@ Source13:	ftp://sable.ox.ac.uk/pub/wordlists/czech/czech-%{name}-ascii-cstug-nov
 Source14:	ftp://sable.ox.ac.uk/pub/wordlists/danish/danish.words.Z
 # Source14-md5:	db8006faa2c121446d88517f0226ed42
 Source15:	ftp://sable.ox.ac.uk/pub/wordlists/danish/dansk.zip
+# Source15-md5:	24b94c74d226438efee14139b6c9674e
 Source16:	ftp://sable.ox.ac.uk/pub/wordlists/databases/acronyms.Z
 # Source16-md5:	4e20563e851cd53ae1bfcfc7bf9582aa
 Source17:	ftp://sable.ox.ac.uk/pub/wordlists/databases/att800.Z
@@ -163,8 +165,6 @@ Source78:	ftp://sable.ox.ac.uk/pub/wordlists/names/fast-names.gz
 # Source78-md5:	2210f0266115a3321eb05d2b6193500d
 Source79:	ftp://sable.ox.ac.uk/pub/wordlists/names/female-names-kantr.gz
 # Source79-md5:	9c2217cc067c4eecd9ba9f4239430480
-Source78:	ftp://sable.ox.ac.uk/pub/wordlists/names/female-names.gz
-Source79:	ftp://sable.ox.ac.uk/pub/wordlists/names/givennames-ol.gz
 Source80:	ftp://sable.ox.ac.uk/pub/wordlists/names/male-names-kantr.gz
 # Source80-md5:	9582d15484d390dd2aba00dc6866700d
 Source81:	ftp://sable.ox.ac.uk/pub/wordlists/names/male-names.gz
@@ -173,7 +173,6 @@ Source82:	ftp://sable.ox.ac.uk/pub/wordlists/names/movie-characters.gz
 # Source82-md5:	017df6a5dbb629a4cb5d2e1f14dde1fe
 Source83:	ftp://sable.ox.ac.uk/pub/wordlists/names/names.french.gz
 # Source83-md5:	54b3647f6cd42d880f72bae5c495bb3f
-Source83:	ftp://sable.ox.ac.uk/pub/wordlists/names/names.hp.gz
 Source84:	ftp://sable.ox.ac.uk/pub/wordlists/names/other-names.gz
 # Source84-md5:	e0a942a289d8ae61c940d969e5a89059
 Source85:	ftp://sable.ox.ac.uk/pub/wordlists/names/shakesp-names.gz
@@ -192,7 +191,6 @@ Source91:	ftp://sable.ox.ac.uk/pub/wordlists/net/usenet-loginids.Z
 # Source91-md5:	379262455449d4f96976e3ebfc7d5c08
 Source92:	ftp://sable.ox.ac.uk/pub/wordlists/net/usenet-machines.Z
 # Source92-md5:	b32512799f315eab15d360844a100d16
-Source92:	ftp://sable.ox.ac.uk/pub/wordlists/net/uunet-sites.Z
 Source93:	ftp://sable.ox.ac.uk/pub/wordlists/norwegian/words.norwegian.Z
 # Source93-md5:	b62ef95372e88d1f5ec170aebce9b432
 Source94:	ftp://sable.ox.ac.uk/pub/wordlists/places/Colleges.Z
@@ -261,6 +259,10 @@ Source125:	ftp://sable.ox.ac.uk/pub/wordlists/turkish/turkish.dict.gz
 # Source125-md5:	87fc6c80ae723d4e7f776c474446e73c
 Source126:	ftp://sable.ox.ac.uk/pub/wordlists/yiddish/yiddish.Z
 # Source126-md5:	95ad8defeec3d2565158d3986671979d
+Source127:	ftp://sable.ox.ac.uk/pub/wordlists/names/female-names.gz
+Source128:	ftp://sable.ox.ac.uk/pub/wordlists/names/givennames-ol.gz
+Source129:	ftp://sable.ox.ac.uk/pub/wordlists/names/names.hp.gz
+Source130:	ftp://sable.ox.ac.uk/pub/wordlists/net/uunet-sites.Z
 Patch0:		%{name}-noheaders.patch
 BuildRequires:	ncompress
 BuildRequires:	unzip
@@ -287,7 +289,7 @@ compress -dc %{SOURCE2} %{SOURCE3} %{SOURCE4} %{SOURCE5} %{SOURCE6} %{SOURCE7} \
 	%{SOURCE90} %{SOURCE91} %{SOURCE92} %{SOURCE93} %{SOURCE94} \
 	%{SOURCE95} %{SOURCE96} %{SOURCE97} %{SOURCE98} %{SOURCE99} \
 	%{SOURCE110} %{SOURCE111} %{SOURCE112} %{SOURCE120} %{SOURCE122} \
-	%{SOURCE124} %{SOURCE126} > all.Z.lst
+	%{SOURCE124} %{SOURCE126} %{SOURCE130} > all.Z.lst
 gzip -dc %{SOURCE20} %{SOURCE21} %{SOURCE22} %{SOURCE23} \
 	%{SOURCE24} %{SOURCE25} %{SOURCE26} %{SOURCE27} %{SOURCE28} \
 	%{SOURCE29} %{SOURCE30} %{SOURCE31} %{SOURCE33} %{SOURCE34} \
@@ -304,7 +306,7 @@ gzip -dc %{SOURCE20} %{SOURCE21} %{SOURCE22} %{SOURCE23} \
 	%{SOURCE104} %{SOURCE105} %{SOURCE106} %{SOURCE106} %{SOURCE107} \
 	%{SOURCE108} %{SOURCE109} %{SOURCE113} %{SOURCE114} %{SOURCE115} \
 	%{SOURCE116} %{SOURCE117} %{SOURCE118} %{SOURCE119} %{SOURCE120} \
-	%{SOURCE121} %{SOURCE123} > all.gz.lst
+	%{SOURCE121} %{SOURCE123} %{SOURCE127} %{SOURCE128} %{SOURCE129}> all.gz.lst
 
 gzip -dc %{SOURCE12} > croatian
 gzip -dc %{SOURCE40} > hungarian
