@@ -2,7 +2,7 @@ Summary:	Word list based on files from ftp://sable.ox.ac.uk/pub/wordlists/
 Summary(pl):	Lista s³ów bazuj±ca na plikach z ftp://sable.ox.ac.uk/pub/wordlists/
 Name:		wordlist
 Version:	1.0
-Release:	4
+Release:	5
 License:	distributable
 Group:		Base
 Source0:	ftp://sable.ox.ac.uk/pub/wordlists/american/dic-0294.tar.gz
