@@ -186,11 +186,11 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_datadir}/dict
 
 cat * | egrep -v "^$|^\#" | tr A-Z a-z | sort | uniq > \
-	$RPM_BUILD_ROOT%{_datadir}/dict/worsa
+	$RPM_BUILD_ROOT%{_datadir}/dict/words
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%{_datadir}/john/*
+%{_datadir}/dict/words
