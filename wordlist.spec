@@ -138,6 +138,7 @@ Source124:	ftp://sable.ox.ac.uk/pub/wordlists/swedish/words.swedish.Z
 Source125:	ftp://sable.ox.ac.uk/pub/wordlists/turkish/turkish.dict.gz
 Source126:	ftp://sable.ox.ac.uk/pub/wordlists/yiddish/yiddish.Z
 BuildRequires:	ncompress
+BuildRequires:	unzip
 BuildArch:	noarch
 Provides:	words
 Buildroot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
