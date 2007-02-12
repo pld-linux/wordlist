@@ -1,5 +1,5 @@
 Summary:	Word list based on files from ftp://sable.ox.ac.uk/pub/wordlists/
-Summary(pl.UTF-8):   Lista słów bazująca na plikach z ftp://sable.ox.ac.uk/pub/wordlists/
+Summary(pl.UTF-8):	Lista słów bazująca na plikach z ftp://sable.ox.ac.uk/pub/wordlists/
 Name:		wordlist
 Version:	1.0
 Release:	5
