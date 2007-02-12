@@ -1,5 +1,5 @@
 Summary:	Word list based on files from ftp://sable.ox.ac.uk/pub/wordlists/
-Summary(pl):	Lista s³ów bazuj±ca na plikach z ftp://sable.ox.ac.uk/pub/wordlists/
+Summary(pl.UTF-8):   Lista sÅ‚Ã³w bazujÄ…ca na plikach z ftp://sable.ox.ac.uk/pub/wordlists/
 Name:		wordlist
 Version:	1.0
 Release:	5
@@ -274,8 +274,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Word list based on files from ftp://sable.ox.ac.uk/pub/wordlists/.
 
-%description -l pl
-Lista s³ów bazuj±ca na plikach z ftp://sable.ox.ac.uk/pub/wordlists/.
+%description -l pl.UTF-8
+Lista sÅ‚Ã³w bazujÄ…ca na plikach z ftp://sable.ox.ac.uk/pub/wordlists/.
 
 %prep
 %setup -q -c
