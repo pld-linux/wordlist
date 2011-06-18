@@ -162,7 +162,9 @@ Source76:	ftp://sable.ox.ac.uk/pub/wordlists/names/crl-names.gz
 Source77:	ftp://sable.ox.ac.uk/pub/wordlists/names/famous.gz
 # Source77-md5:	deb89f5460344d0d3d430b1bde2e01f9
 Source78:	ftp://sable.ox.ac.uk/pub/wordlists/names/fast-names.gz
+# Source78-md5:	b4ca210f219346063a4174b401abb452
 Source79:	ftp://sable.ox.ac.uk/pub/wordlists/names/female-names-kantr.gz
+# Source79-md5:	77ccd0a5ca8a54792233f7d1a204f6de
 Source80:	ftp://sable.ox.ac.uk/pub/wordlists/names/male-names-kantr.gz
 # Source80-md5:	9582d15484d390dd2aba00dc6866700d
 Source81:	ftp://sable.ox.ac.uk/pub/wordlists/names/male-names.gz
@@ -170,6 +172,7 @@ Source81:	ftp://sable.ox.ac.uk/pub/wordlists/names/male-names.gz
 Source82:	ftp://sable.ox.ac.uk/pub/wordlists/names/movie-characters.gz
 # Source82-md5:	017df6a5dbb629a4cb5d2e1f14dde1fe
 Source83:	ftp://sable.ox.ac.uk/pub/wordlists/names/names.french.gz
+# Source83-md5:	0824bd6f97bf39ca69f1fa0e60f9b60d
 Source84:	ftp://sable.ox.ac.uk/pub/wordlists/names/other-names.gz
 # Source84-md5:	e0a942a289d8ae61c940d969e5a89059
 Source85:	ftp://sable.ox.ac.uk/pub/wordlists/names/shakesp-names.gz
@@ -187,6 +190,7 @@ Source90:	ftp://sable.ox.ac.uk/pub/wordlists/net/inet-machines.Z
 Source91:	ftp://sable.ox.ac.uk/pub/wordlists/net/usenet-loginids.Z
 # Source91-md5:	379262455449d4f96976e3ebfc7d5c08
 Source92:	ftp://sable.ox.ac.uk/pub/wordlists/net/usenet-machines.Z
+# Source92-md5:	2887115d390e2599f3d79766f18a33ae
 Source93:	ftp://sable.ox.ac.uk/pub/wordlists/norwegian/words.norwegian.Z
 # Source93-md5:	b62ef95372e88d1f5ec170aebce9b432
 Source94:	ftp://sable.ox.ac.uk/pub/wordlists/places/Colleges.Z
