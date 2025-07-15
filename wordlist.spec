@@ -315,7 +315,7 @@ gzip -dc %{SOURCE20} %{SOURCE21} %{SOURCE22} %{SOURCE23} \
 gzip -dc %{SOURCE12} > croatian
 gzip -dc %{SOURCE40} > hungarian
 gzip -dc %{SOURCE125} > turkish.dict
-%patch0 -p1
+%patch -P0 -p1
 
 for f in croatian hungarian ; do
 	sed -e 's/ .*//' $f > $f.new
