@@ -2,7 +2,7 @@ Summary:	Word list based on files from ftp://ftp.ox.ac.uk/pub/wordlists/
 Summary(pl.UTF-8):	Lista słów bazująca na plikach z ftp://ftp.ox.ac.uk/pub/wordlists/
 Name:		wordlist
 Version:	1.0
-Release:	5
+Release:	6
 License:	distributable
 Group:		Base
 Source0:	ftp://ftp.ox.ac.uk/pub/wordlists/american/dic-0294.tar.gz
